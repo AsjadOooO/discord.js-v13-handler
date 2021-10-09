@@ -15,10 +15,10 @@ const client = new V2dClient({
 })
 client.config = require('./config.js')
 
-client.loadEvents("src/events");
-client.loadCommands("src/commands");
+client.loadEvents(__dirname + "/src/events");
+client.loadCommands(__dirname + "/src/commands");
 
 client.initializeMongoose(client.config.mongo) // if you need to connect to mongo remove this line otherwise
 
 
-client.login(config.token)
+client.login(client.config.token)
