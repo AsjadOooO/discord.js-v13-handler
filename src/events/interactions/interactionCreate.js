@@ -1,4 +1,4 @@
-const { timeformat } = require("../../utils/functions");
+const { timeformat } = require("visa2discord");
 
 module.exports = async (client, interaction) => {
 
