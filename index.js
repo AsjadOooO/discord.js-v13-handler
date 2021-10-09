@@ -1,6 +1,6 @@
 console.clear();
 const Discord = require("discord.js");
-const config = require('./config.js')
+
 
 const { V2dClient } = require("visa2discord")
 const client = new V2dClient({
@@ -13,10 +13,12 @@ const client = new V2dClient({
   Discord.Intents.FLAGS.GUILD_MESSAGES ,Discord.Intents.FLAGS.GUILDS
   ]
 })
-client.loadEvents("test/events");
-client.loadCommands("test/commands");
+client.config = require('./config.js')
 
-client.initializeMongoose(config.mongo) // if you need to connect to mongo remove this line otherwise
+client.loadEvents("src/events");
+client.loadCommands("src/commands");
+
+client.initializeMongoose(client.config.mongo) // if you need to connect to mongo remove this line otherwise
 
 
 client.login(config.token)
