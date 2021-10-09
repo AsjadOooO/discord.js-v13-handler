@@ -10,7 +10,7 @@ module.exports = class ExampleCommand extends Command {
         enabled: true, //booleen
         usage: "",
         category: "",
-        botPermissions: [""],
+        botPermissions: [],
       },
       slashCommand: {
         enabled: true, //booleen
