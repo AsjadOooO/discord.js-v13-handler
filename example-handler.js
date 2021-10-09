@@ -10,7 +10,11 @@ module.exports = class ExampleCommand extends Command {
         enabled: true, //booleen
         usage: "",
         category: "",
-        botPermissions: [],
+        botPermissions: [], //perms required by bot to run the cmd
+        minArgsCount: 0, //integer
+        guildOwnerOnly: false, //cmd will only work for guild owner
+        nsfw: false, //if cmd is nsfw
+        userPermissions: [], //perms required by user to run the cmd
       },
       slashCommand: {
         enabled: true, //booleen
