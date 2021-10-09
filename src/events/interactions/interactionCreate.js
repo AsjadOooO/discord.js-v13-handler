@@ -1,4 +1,4 @@
-const { timeformat } = require("../../utils/functions");
+const { timeformat } = require("../../utils/functions.js");
 
 module.exports = async (client, interaction) => {
 
