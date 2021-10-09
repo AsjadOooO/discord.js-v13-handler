@@ -6,7 +6,7 @@ const prefix = client.config.prefix
 
   let isCommand = false;
   if (message.content.startsWith(prefix)) {
-    const let args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const invoke = args.shift().toLowerCase();
     const cmd = client.getCommand(invoke);
 
